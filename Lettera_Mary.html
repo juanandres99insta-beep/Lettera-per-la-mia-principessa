@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <title>Per Te, Principessa 💖</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <h1>Per la mia Mary <img src="https://em-content.zobj.net/source/apple/81/sparkling-heart_1f496.png" alt="Cuore Rosa" style="width: 40px; vertical-align: middle;"></h1>
+
+
+  <div class="lettera">
+    <p>
+      Ciao amore mio,<br><br>
+      In questo piccolo angolo del web, voglio dirti quanto ti amo. <br>
+      Ogni giorno con te è un regalo, ogni sorriso è una carezza per il mio cuore. <br>
+      Sei la luce che illumina il mio cammino, il sogno che non voglio mai smettere di sognare. <br><br>
+      Ti amo con tutta l'anima, oggi e sempre. 💗<br><br>
+      Il tuo [Nome]
+    </p>
+  </div>
+
+  <!-- SCRIPT FIORI -->
+  <script>
+    function createFlower() {
+      const flower = document.createElement('div');
+      flower.classList.add('flower');
+      flower.style.left = Math.random() * 100 + 'vw';
+      flower.style.animationDuration = (5 + Math.random() * 5) + 's';
+      flower.style.top = '-50px';
+      document.body.appendChild(flower);
+
+      setTimeout(() => {
+        flower.remove();
+      }, 10000);
+    }
+
+    setInterval(createFlower, 300);
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,100 @@
+/* 🌸 SFONDO ROMANTICO ANIMATO */
+body {
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(135deg, #ffe6f0, #ffc2d1, #ffd1dc, #ffe6f0);
+  background-size: 400% 400%;
+  animation: backgroundMove 20s ease infinite;
+  font-family: 'Segoe Script', cursive;
+  overflow: hidden;
+  color: #d63384;
+  text-align: center;
+}
+
+@keyframes backgroundMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* ✨ TITOLO CON LUCCICHIO */
+h1 {
+  margin-top: 60px;
+  font-size: 3em;
+  text-shadow: 0 0 10px #fff, 0 0 20px #ff99cc;
+  animation: pulseGlow 2s infinite alternate;
+}
+
+@keyframes pulseGlow {
+  from { text-shadow: 0 0 5px #fff, 0 0 10px #ff99cc; }
+  to { text-shadow: 0 0 15px #fff, 0 0 30px #ff66b2; }
+}
+
+/* 💌 LETTERA D'AMORE */
+.lettera {
+  margin: 40px auto;
+  padding: 30px;
+  max-width: 600px;
+  background: rgba(255, 255, 255, 0.85);
+  border-radius: 25px;
+  font-size: 1.3em;
+  line-height: 1.7;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+  position: relative;
+  z-index: 10;
+  animation: heartbeat 2s infinite;
+}
+
+@keyframes heartbeat {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.02); }
+}
+
+/* 🌺 FIORI ROSA CHE CADONO */
+.flower {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  background-image: url('https://static.vecteezy.com/system/resources/previews/023/377/451/non_2x/pink-flower-illustration-free-png.png');
+  background-size: cover;
+  animation: fall linear infinite;
+  opacity: 0.6;
+  z-index: 1;
+}
+
+@keyframes fall {
+  0% {
+    transform: translateY(-50px) rotate(0deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(110vh) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+/* ❤️ CUORI CHE SALGONO */
+.heart {
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/Red_Heart.svg/2048px-Red_Heart.svg.png');
+  background-size: cover;
+  animation: floatHeart linear infinite;
+  opacity: 0.6;
+  z-index: 0;
+}
+
+@keyframes floatHeart {
+  0% {
+    transform: translateY(100vh) scale(0.5) rotate(0deg);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-50vh) scale(1.2) rotate(360deg);
+    opacity: 0;
+  }
+}
